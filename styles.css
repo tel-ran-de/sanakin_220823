@@ -36,6 +36,15 @@ header {
   grid-row: 3/4;
 }
 
+.products-information:nth-of-type(4) {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.summary-container {
+  grid-column: 3/4;
+  grid-row: 2/5;
+}
+
 .products-information,
 .summary-container {
   border-radius: 9px;
