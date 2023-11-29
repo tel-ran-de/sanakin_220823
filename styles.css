@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #000000;
+}
+
+aside {
+  width: 250px;
+  height: 100vh;
+  padding: 25px;
+  background: #fbf9f8;
+}
+
+.grid-container {
+  display: grid;
+}
