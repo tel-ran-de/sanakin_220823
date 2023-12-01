@@ -19,11 +19,17 @@
 
 /* SIDEBAR */
 aside {
+  display: flex;
+  flex-direction: column;
   position: sticky;
   width: 250px;
   height: 100vh;
-  padding: 25px;
   background: #fbf9f8;
+}
+
+.nav-container {
+  padding: 25px;
+  flex-grow: 3;
 }
 
 #logo {
@@ -48,7 +54,6 @@ nav > ul > li > a > img {
 main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   gap: 23px;
 }
 
@@ -105,6 +110,12 @@ header {
   display: flex;
 }
 
+.profile-wrapper {
+  padding: 25px;
+  background: #f9f2ef;
+  flex-grow: 2;
+}
+
 .profile-wrapper > p {
   color: #000;
   opacity: 0.5;
@@ -146,4 +157,53 @@ header {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container > span {
+  position: absolute;
+}
+
+/* auto-fit auto-fill */
+
+.grid-parent1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.grid-parent2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.grid-child {
+  background: rgb(248, 174, 174);
+  padding: 20px;
+}
+/*  and связывает условия  */
+@media (max-width: 1200px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .summary-container {
+    grid-row: 5/6;
+    grid-column: 1/4;
+  }
+
+  .product-actions.child1 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .product-actions.child2 {
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
 }
